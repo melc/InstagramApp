@@ -1,0 +1,34 @@
+<!-- Display Roaming Rover information on right frame -->
+<div class="col-md-4">
+  <div class="photostream panel">
+    <ul class="photostream panel-title default-title">
+      <li>Profile</li>
+      <%= render :partial => 'rrFollow' %>
+    </ul>
+    <div class="photostream panel-body default-body">
+      <div class="row">
+        <div class="col-md-4 logoDIV">                    
+          <a href="<%= root_path %>"><img src="assets/rr_icon.jpg" class="logo" /></a>
+        </div>
+        <div class="col-md-8">
+          <%= render :partial => 'rrNews' %>
+        </div>
+      </div>
+      <%= render :partial => 'rrCounts' %>
+    </div>
+  </div> 
+  <div class="photostream panel">
+    <div class="photostream panel-title default-title">About Roaming Rover</div>
+    <div class="photostream panel-body default-body">
+      <span>This is official site for Roaming Rover. Roaming Rover
+      helps dog walkers and dog owners build up business relationship to benefit with each other.  Roaming Rover's goal is to help dog owners make a NO WORRY NO FEAR HAPPY life with their beloved dog kids. Dog walkers joining Roaming Rover will provide their outstanding professional yet humanity skills to make dog kids a wonderful time.
+      </span>
+    </div>
+  </div>
+  <div class="photostream panel">
+      <div class="photostream panel-title default-title">Join Roaming Rover</div>
+      <div class="photostream panel-body default-body">
+        <span>Join our big family and enjoy your time with our members including dog walkers and owners. Visit <span class="rrwebsite"><a href="petskids.com:3000">our website</a></span> to share your stories and pictures with Roaming Rover family members.</span>
+      </div>            
+  </div>
+</div>

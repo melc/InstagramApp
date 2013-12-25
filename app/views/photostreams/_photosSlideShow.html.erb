@@ -1,0 +1,15 @@
+<!-- Display photos slide show on left frame -->
+<div class="col-md-8">
+  <div class="photostream panel">
+    <div class="photostream panel-title default-title">Photo</div>
+      <div class="photostream panel-body default-body">
+        <div id="carousel-photo" class="carousel slide" data-ride="carousel">
+          <% @photos.each_slice(20) do |photos|   %> 
+            <% @photos_20 = photos %>
+            <%= render :partial => 'photosPerSlide' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

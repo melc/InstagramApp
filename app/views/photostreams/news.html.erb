@@ -1,0 +1,13 @@
+<div id="news_div">
+	<% if @news.nil? %>
+		<p>No any Roaming Rover news available</p>
+	<% else %>
+		<% @news.each do |item| %>
+			<div class="newsDIV">
+				<span class="news_title"><%= raw item["title"] %></span>&nbsp;(<span class="news_url"><a href="<%= item["unescapedUrl"] %>" target="_blank">read more >></a></span>)
+				<br />
+				<span class="news_date"><%= DateTime.parse(item["publishedDate"]).strftime("%a, %b %d, %Y %H:%M") %></span>
+			</div>
+		<% end %>
+	<% end %>
+</div>

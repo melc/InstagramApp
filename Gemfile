@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -26,6 +26,31 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+# Underscore 
+gem 'underscore-rails'
+
+# Google Maps Geocoding Plugin
+gem 'geocoder'
+
+# Google Analytics API
+gem "rack-google-analytics", "~> 0.14.0"
+
+# Google Adsword API
+gem 'google-adwords-api', "~> 0.11.0"
+
+# twitter bootstrap font icons
+gem "font-awesome-rails"
+
+# A Ruby wrapper for the Instagram REST and Search APIs
+gem 'instagram'
+
+# Sass-powered version of Bootstrap
+gem 'bootstrap-sass', '~> 3.0.3.0'
+
+group :development do
+  gem 'rails_layout'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

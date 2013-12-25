@@ -1,0 +1,265 @@
+// Place all the styles related to the photostreams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.photostream ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+
+.thumbnail {
+//	width: 156px !important;
+//	height: 156px !important;
+	border: 2px outset silver !important;
+	border-radius: 5px !important;
+}
+
+.twitter-blue {
+	color: #4099FF;
+}
+
+.facebook-blue, .cntSeq {
+	color: #3B5998;
+}
+
+.googleplus-red {
+	color: #D34836;
+}
+
+.youtube-red {
+	color: #b31217;
+}
+
+.pinterest-red {
+	color: #C92228;
+}
+
+.instagram-blue {
+	color: #3f729b;
+}
+
+.iconStyle {
+	width: 26px !important;
+}
+
+.logoDIV a:hover .logo { 
+	opacity: 0.5 !important;
+}
+
+.centerLogo {
+	font-size: 20px;
+	list-style-type: none;
+
+	text-shadow: -1px -1px #FFF, 1px 1px #333; 
+	margin-left: auto; 
+	margin-right: auto; 	
+}
+
+.centerLogo {
+	color:#ccc;
+}
+
+.photostream .news-panel {
+	margin-left:-15px;	
+	height: 155px;
+}
+
+.photostream .news-title {
+	font-size: small;
+	color: navy;
+	background-color: #E8EBD5;
+	font-weight: bold;
+	height: 25px !important;
+	line-height: 25px !important;
+	min-height: 25px !important;
+	
+	text-align: middle !important;
+	padding-left: 10px !important;
+	border-radius: 5px !important;
+
+}
+
+.photostream.panel-title.default-title {
+	
+	color: white;
+	font-weight: bold;
+	height: 30px !important;
+	line-height: 30px !important;
+	min-height: 30px !important;
+	
+	text-align: middle !important;
+	padding-left: 10px !important;
+	border-radius: 5px !important;
+
+	background: #45484d; /* Old browsers */
+	background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.photostream.panel-title.default-title li
+{
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
+
+.photostream.panel-body.default-body {
+	padding-left: 8px !important;
+	padding-right: 8px !important;
+}
+
+main  {
+	padding-top: 20px;
+}
+
+.rrwebsite a:link {
+	font-size: 14px;
+	font-weight: bold;
+	color: darkred;
+}
+
+.photostream .logo {
+	width: 114px;
+	height: 114px;
+	border: 1 inset darkgrey;
+	border-radius: 5px;
+	opacity: 0.9;
+}
+
+.carousel-inner .row {
+	margin: 0;
+	padding: 0;
+}
+
+// instagram icon setup
+.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-16 { width: 16px; height: 16px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-16 { 
+	background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-16@2x.png); 
+	background-size: 60px 178px; 
+ } }
+
+ .instagram-blue {
+ 	padding-top:17px;
+ 	padding-left: 14px;
+ } 
+
+ .cntSeq {
+ 	font-size: 18px;
+ 	color: #4099FF;
+ 	width: 100% !important;
+ 	padding-top: 5px;
+ 	padding-bottom: 10px;
+ }
+
+ .cntSeqLabel {
+ 	padding-bottom: 5px;
+ }
+
+ .countDisplay {
+ 	margin-top: 10px !important;
+ 	text-align: center;
+ 	font-weight: bold;
+ 	list-style-type: none;
+ }
+
+.photobody a:hover img {
+ 	opacity: 0.5;
+ }
+
+
+.photobody a:hover {
+ 	width: 150px !important;
+ 	height: 150px !important;
+ }
+
+.user_id_box {
+ 	padding-top:17px;
+ 	font-size: small;
+ 	font-weight: bold;
+ 	color: white;
+ }
+
+.photoCommentHeart {
+ 	height: 20px;
+ 	line-height: 20px;
+ 	min-height: 20px;
+    position: absolute; 
+    width: 80px;
+   	margin-right: 150px;
+   	opacity: 1;
+
+   	font-family: Arial Helvetica sans-serif;
+   	font-weight: bold;
+ }
+
+.photo-caption {
+ 	margin-left: 5px;
+ }
+
+#news_div	{ 
+	display: block; 
+	position: absolute; 
+	overflow: visible;
+	margin: 26px 15px 0 3px;
+	padding: 0 16px 0 0;
+	border: 0;
+	left: 0; 
+	top: 0; 
+	height: 135px !important;
+	max-height: 135px !important;
+	text-align: left;
+	padding-bottom: 12px !important;
+	font-size: 11px;		
+	z-index:3;
+}
+
+.newsDIV {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+.news_title {
+	font-weight: bold;
+}
+
+.news_date {
+	font-size: x-small
+}
+
+.news_url a:link {
+	color: blue;
+}
+
+.news_url a:hover {
+	color: purple;
+}
+
+// reset grid columns for 5 equal length columns.
+@media (min-width: 768px){
+    .fivecolumns .span2 {
+        width: 18.297872340425532%;
+        *width: 18.2234042553191494%;
+    }
+}
+@media (min-width: 1200px) {
+    .fivecolumns .span2 {
+        width: 17.9487179487179488%;
+        *width: 17.87424986361156592%;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .fivecolumns .span2 {
+        width: 17.79005524861878448%;
+        *width: 17.7155871635124022%;
+    }
+}

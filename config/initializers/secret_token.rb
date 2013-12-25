@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-InstagramApp::Application.config.secret_key_base = 'c6f05fc0e93505106060dd89723ba4f48872e125a7b2ee6765142ec6c01689361b06455e19a96fc3a79aa1d1adc9c69efb64caa0a0036f395165c1ec836f8374'
+InstagramApp::Application.config.secret_key_base = 'a0373946c14d556b5d9974b67b12431eb997c17c1eb16a7a11387bdd753b827f5552cc0f36f8ada785c376718c59513650ed4cc6a305452bee8f291fb603a1ef'
