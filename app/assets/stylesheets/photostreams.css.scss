@@ -242,10 +242,18 @@ main  {
 	font-size: x-small;
 }
 
-.heart_color {
+.imgCaption:hover {
+	opacity: 1 !important;
+}
+
+.heart_color, .comment_color {
+	color: white;  
+}
+
+.heart_color:hover {
 	color: #b31217;
 }
 
-.comment_color {
+.comment_color:hover {
 	color: #4099FF;
 }
