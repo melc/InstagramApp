@@ -1,42 +1,36 @@
 // reset btn-primary features
 
-.btn-primary a:link, .btn-primary a:visited, .btn-primary a:hover {
-  border: 3px outset silver !important;
-  line-height: 15px;
-
-  border: 1px outset silver;
+.container {
+  font-family: franklin gothic medium condensed, arial, sans serif;
+  font-size: 90%;
 }
 
-.btn-primary a:link {
-  	background-color: #3f729b !important;
-	color: white !important;
+.navbar-brand {
+  font-size: 90%;
+  font-weight: bold;
 }
 
-.btn-primary a:visited {
-	color: white !important;
-}
-
-.btn-primary a:hover {
-	color: black !important;
-	opacity: 0.5;
+.carousel-inner {
+  min-height: 640px;
 }
 
 // reset grid columns for 5 equal length columns.
-@media (min-width: 768px){
-    .fivecolumns .span2 {
-        width: 18.297872340425532%;
-        *width: 18.2234042553191494%;
+@media (min-width: 768px) {
+    .fivecolumns .col-sm-2 {
+        width: 20%;
+        *width: 20%;
     }
 }
+
 @media (min-width: 1200px) {
-    .fivecolumns .span2 {
-        width: 17.9487179487179488%;
-        *width: 17.87424986361156592%;
+    .fivecolumns .col-lg-2 {
+        width: 20%;
+        *width: 20%;
     }
 }
-@media (min-width: 768px) and (max-width: 979px) {
-    .fivecolumns .span2 {
-        width: 17.79005524861878448%;
-        *width: 17.7155871635124022%;
+@media (min-width: 992px) {
+    .fivecolumns .col-md-2 {
+        width: 20%;
+        *width: 20%;
     }
 }

@@ -2,8 +2,18 @@
 <div class="panel panel-success news-panel">
 	<div class="panel-title news-title">Roaming Rover News</div>
 	<div class="panel-body news-body">
-		<div>
-			<iframe id="NewsWin" seamless src="news.html.erb" height="135" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" style="display: block; margin: 0 auto; padding: 0; border: #000000 1px solid;" name="news"></iframe>
+		<div id="news_div">
+			<div id="news_content">
+				<% if @news.nil? %>
+					<p>No any Roaming Rover news available</p>
+				<% else %>
+					<% @news.each do |item| %>
+						<div class="newsDIV">
+							<span class="news_title"><%= raw item["title"] %></span>&nbsp;(<span class="news_date"><%= DateTime.parse(item["publishedDate"]).strftime("%a, %b %d, %Y %H:%M") %></span>)&nbsp;<span class="news_url"><a href="<%= item["unescapedUrl"] %>" target="_blank">read more >></a></span>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>

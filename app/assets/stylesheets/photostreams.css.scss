@@ -2,37 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.photostream {
+	font-size: small;
+	font-family: franklin gothic medium condensed, arial, sans serif;
+}
+
 .photostream ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;	
 }
 
-.thumbnail {
-//	width: 156px !important;
-//	height: 156px !important;
+.photostream .inline {
+	display: inline;
+}
+
+.photostream .thumbnail {
+	margin: 0 -10px 5px -10px;
 	border: 2px outset silver !important;
 	border-radius: 5px !important;
 }
 
+.photostream .thumbnail:hover {
+	opacity: 0.5;
+}
+
 .twitter-blue {
-	color: #4099FF;
+	color: white; //#4099FF;
 }
 
 .facebook-blue, .cntSeq {
-	color: #3B5998;
+	color: white; //#3B5998;
 }
 
 .googleplus-red {
-	color: #D34836;
+	color: white; //#D34836;
 }
 
 .youtube-red {
-	color: #b31217;
+	color: white; //#b31217;
 }
 
 .pinterest-red {
-	color: #C92228;
+	color: white; //#C92228;
 }
 
 .instagram-blue {
@@ -45,39 +57,6 @@
 
 .logoDIV a:hover .logo { 
 	opacity: 0.5 !important;
-}
-
-.centerLogo {
-	font-size: 20px;
-	list-style-type: none;
-
-	text-shadow: -1px -1px #FFF, 1px 1px #333; 
-	margin-left: auto; 
-	margin-right: auto; 	
-}
-
-.centerLogo {
-	color:#ccc;
-}
-
-.photostream .news-panel {
-	margin-left:-15px;	
-	height: 155px;
-}
-
-.photostream .news-title {
-	font-size: small;
-	color: navy;
-	background-color: #E8EBD5;
-	font-weight: bold;
-	height: 25px !important;
-	line-height: 25px !important;
-	min-height: 25px !important;
-	
-	text-align: middle !important;
-	padding-left: 10px !important;
-	border-radius: 5px !important;
-
 }
 
 .photostream.panel-title.default-title {
@@ -132,11 +111,6 @@ main  {
 	opacity: 0.9;
 }
 
-.carousel-inner .row {
-	margin: 0;
-	padding: 0;
-}
-
 // instagram icon setup
 .ig-b- { display: inline-block; }
 .ig-b- img { visibility: hidden; }
@@ -149,8 +123,8 @@ main  {
  } }
 
  .instagram-blue {
- 	padding-top:17px;
- 	padding-left: 14px;
+ 	padding-top:20px;
+ 	padding-left: 15px;
  } 
 
  .cntSeq {
@@ -183,83 +157,95 @@ main  {
  }
 
 .user_id_box {
- 	padding-top:17px;
+ 	padding-top:20px;
  	font-size: small;
  	font-weight: bold;
  	color: white;
  }
 
-.photoCommentHeart {
- 	height: 20px;
- 	line-height: 20px;
- 	min-height: 20px;
-    position: absolute; 
-    width: 80px;
-   	margin-right: 150px;
-   	opacity: 1;
+.photostream .news-panel {
+	margin: 0 -15px;	
+	height: 100%;
+	width: 105%;
+	padding-bottom: 10px;
+}
 
-   	font-family: Arial Helvetica sans-serif;
-   	font-weight: bold;
- }
+.photostream .news-title {
+	font-size: small;
+	color: navy;
+	background-color: #E8EBD5;
+	font-weight: bold;
+	height: 25px !important;
+	line-height: 25px !important;
+	min-height: 25px !important;
+	
+	text-align: middle !important;
+	padding-left: 10px !important;
+	border-radius: 5px !important;
 
-.photo-caption {
- 	margin-left: 5px;
- }
+}
 
-#news_div	{ 
-	display: block; 
-	position: absolute; 
-	overflow: visible;
-	margin: 26px 15px 0 3px;
-	padding: 0 16px 0 0;
-	border: 0;
-	left: 0; 
-	top: 0; 
-	height: 135px !important;
-	max-height: 135px !important;
-	text-align: left;
-	padding-bottom: 12px !important;
-	font-size: 11px;		
-	z-index:3;
+.news-body {
+	position: relative;
+	width: 100%;
+    overflow: hidden;
+
+	word-break: break-all; /* webkit /
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: -moz-pre-wrap; / fennec /
+	white-space: pre-wrap;
+	white-space: pre\9; / IE7+ */
+}
+
+
+#news_div { 
+   	height: 135px;
+   	margin: -15px;
+   	padding-left: 5px;
+   	padding-right: 5px;
+   	width:  calc(115% + 18px);
+    overflow-y: scroll;  
 }
 
 .newsDIV {
-	padding-top: 5px !important;
-	padding-bottom: 5px !important;
+	padding-bottom: 10px !important;
 }
 
 .news_title {
 	font-weight: bold;
+	font-size: x-small;
 }
 
 .news_date {
-	font-size: x-small
+	font-size: xx-small;
 }
 
 .news_url a:link {
 	color: blue;
+	font-size: x-small;
 }
 
 .news_url a:hover {
 	color: purple;
 }
 
-// reset grid columns for 5 equal length columns.
-@media (min-width: 768px){
-    .fivecolumns .span2 {
-        width: 18.297872340425532%;
-        *width: 18.2234042553191494%;
-    }
+.imgThumbnail {
+	position: relative;
 }
-@media (min-width: 1200px) {
-    .fivecolumns .span2 {
-        width: 17.9487179487179488%;
-        *width: 17.87424986361156592%;
-    }
+
+.imgCaption {
+	position: absolute;
+	top: 5%;
+	background: black;
+	opacity: 0.9;
+	font-size: x-small;
 }
-@media (min-width: 768px) and (max-width: 979px) {
-    .fivecolumns .span2 {
-        width: 17.79005524861878448%;
-        *width: 17.7155871635124022%;
-    }
+
+.heart_color {
+	color: #b31217;
+}
+
+.comment_color {
+	color: #4099FF;
 }

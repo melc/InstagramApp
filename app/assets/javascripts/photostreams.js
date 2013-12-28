@@ -1,49 +1,39 @@
-var scrollspeed = 1;		// SET SCROLLER SPEED 1 = SLOWEST
-var speedjump   = 30;		// ADJUST SCROLL JUMPING = RANGE 20 TO 40
-var startdelay  = 2; 		// START SCROLLING DELAY IN SECONDS
-var nextdelay   = 0; 		// SECOND SCROLL DELAY IN SECONDS 0 = QUICKEST
-var topspace    = 0;		// TOP SPACING FIRST TIME SCROLLING
-var frameheight = 55;		// IF YOU RESIZE THE WINDOW EDIT THIS HEIGHT TO MATCH
-
-
-current = (scrollspeed);
-
-function HeightData() {
-    AreaHeight = dataobj.offsetHeight;
-    if (AreaHeight === 0) {
-	setTimeout("HeightData()", (startdelay * 1500));
-    } else {
-	ScrollNewsDiv();
-    }
-}
-
-function NewsScrollStart() {
-    dataobj = document.all ? document.all.news_div : document.getElementById("news_div");
-    dataobj.style.top = topspace + 'px';
-    setTimeout("HeightData()", (startdelay * 1000));
-}
-
-function ScrollNewsDiv() {
-    dataobj.style.top = parseInt(dataobj.style.top) - scrollspeed + 'px';
-    if (parseInt(dataobj.style.top) < AreaHeight * (-1)) {
-	dataobj.style.top = frameheight + 'px';
-	setTimeout("ScrollNewsDiv()", (nextdelay * 1000));
-    } else {
-	setTimeout("ScrollNewsDiv()", speedjump);
-    }
-}
-
 $(document).ready(function() {
 
+    $('#news_div').animate({'scrollTop' : $(window).height()}, 
+        {
+            duration: 20000,
+            complete: function(){
+                $('#news_div').animate({'scrollTop' : 0}, 8000);
+            }
+        }
+    )
 
 	$('#news_div').mouseover(function() {
-		scrollspeed=0;
-	})
+        $('#news_div').stop(); 
+    })
 
 	$('#news_div').mouseout(function() {
-		scrollspeed=current;
-	})
+        $('#news_div').animate({'scrollTop' : $(window).height()}, 20000); 
+    })
 
-	NewsScrollStart();
+    $('.bxslider').bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 8000,
+        autoHover: true,
+        controls: false
+    });
+
+	// $('#btnPopular').on('click', function() {
+ //    	// var uri = "https://api.instagram.com/v1/media/popular?access_token=" + <%= @photostreams[0].access_token %>
+ //    	alert("popular");
+ //  	})
+
+	// $('#btnSearch').on('click', function() {
+ //    	alert('search');
+ //  	})
+    
+
 
 })

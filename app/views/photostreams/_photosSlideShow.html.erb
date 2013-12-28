@@ -3,12 +3,27 @@
   <div class="photostream panel">
     <div class="photostream panel-title default-title">Photo</div>
       <div class="photostream panel-body default-body">
-        <div id="carousel-photo" class="carousel slide" data-ride="carousel">
-          <% @photos.each_slice(20) do |photos|   %> 
-            <% @photos_20 = photos %>
-            <%= render :partial => 'photosPerSlide' %>
+        <ul class="bxslider">       
+          <% @photos.each_slice(20).with_index do |pics, index|   %> 
+            <li>
+              <% pics.each_slice(5) do |photo5| %>
+                <ul class="row fivecolumns">
+                  <% photo5.each do |photo| %>
+                    <li class="col-md-2 col-sm-2 col-lg-2 inline">
+                      <a href="<%= photo["link"] %>" target="_blank" class="thumbnail">
+                        <img src="<%= photo['images']['thumbnail']['url'] %>" class="imgThumbnail"></img>
+                        <div class="imgCaption">&nbsp;
+                          <i class='fa fa-heart heart_color' style='font-weight:bold'></i>&nbsp;<%= photo['likes']['count'] %>&nbsp;
+                          <i class='fa fa-comment comment_color' style='font-weight:bold'></i>&nbsp;<%= photo['comments']['count'] %>&nbsp;
+                        </div>
+                      </a>
+                    </li>
+                  <% end %>
+                </ul>
+              <% end %>
+            </li>
           <% end %>
-        </div>
+        </ul>
       </div>
     </div>
   </div>

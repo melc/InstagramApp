@@ -27,18 +27,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-# Underscore 
-gem 'underscore-rails'
-
-# Google Maps Geocoding Plugin
-gem 'geocoder'
-
-# Google Analytics API
-gem "rack-google-analytics", "~> 0.14.0"
-
-# Google Adsword API
-gem 'google-adwords-api', "~> 0.11.0"
-
 # twitter bootstrap font icons
 gem "font-awesome-rails"
 

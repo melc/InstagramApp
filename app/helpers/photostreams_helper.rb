@@ -51,10 +51,7 @@ module PhotostreamsHelper
     return rr_jsonResults
   end
 
-  def news
-    render :partial => "news", :layout => false
-  end
-
   def rr_follow
+    
  	end
 end
