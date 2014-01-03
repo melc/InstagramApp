@@ -1,4 +1,17 @@
 module PhotostreamsHelper
+  # def authorize
+  #   auth_uri = 'https://instagram.com/oauth/authorize/?client_id=66a938cd0d1d44f6a693343b0af2a186&redirect_uri=http://localhost:3000&response_type=code';
+  #   response = open(auth_uri).read
+  #   parse = JSON.parse(response)
+
+  #   if parse["error"] =="access_denied"
+  #     raise parse[error_description]
+  #   else
+  #     return parse["code"] unless parse["code"].nil?  
+  #   end 
+  # end
+
+
   def photos_count
     tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostreams[0].tag1 + "?access_token=" + @photostreams[0].access_token
     response = open(tag_count_uri).read
@@ -52,6 +65,12 @@ module PhotostreamsHelper
   end
 
   def rr_follow
-    
+    follows_uri = "https://api.instagram.com/v1/users/" + @photostreams[0].user_id + 
+                    "/followed-by?access_token=" + @photostreams[0].access_token  
+    rr_response = open(follows_uri).read
+    rr_parse = JSON.parse(rr_response)
+    rr_jsonResults = rr_parse["data"]
+
+    return rr_jsonResults                
  	end
 end

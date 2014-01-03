@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223013437) do
+ActiveRecord::Schema.define(version: 20140102061520) do
 
   create_table "photostreams", force: true do |t|
     t.string   "client_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131223013437) do
     t.string   "feed2"
     t.string   "feed3"
     t.string   "feed1"
+    t.string   "username"
   end
 
 end

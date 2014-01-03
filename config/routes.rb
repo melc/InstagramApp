@@ -1,6 +1,5 @@
 InstagramApp::Application.routes.draw do
-  resources :photostreams
-
+  resources :instagram_accts, :photostreams
   root :to => 'photostreams#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

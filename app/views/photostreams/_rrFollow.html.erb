@@ -1,2 +1,7 @@
-<li class="followBtn"><%= link_to 'Follow', "http://instagram.com", :class => "btn btn-primary btn-sm pull-right", 'data-no-turbolink' => true %>
+<% if @follow == true %>
+<li class="followBtn"><%= link_to 'Following', "https://api.instagram.com/v1/users/824991990/relationship?access_token=#{@photostreams[0].access_token}&ACTION=unfollow", :method => :post, :class => "btn btn-success btn-sm pull-right", 'data-no-turbolink' => true %>
 </li>
+<% else %>
+	<li class="followBtn"><%= link_to 'Follow', "https://api.instagram.com/v1/users/824991990/relationship?access_token=#{@photostreams[0].access_token}&ACTION=follow", :method => :post, :class => "btn btn-primary btn-sm pull-right", 'data-no-turbolink' => true %>
+	</li>
+<% end %>

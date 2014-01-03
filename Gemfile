@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 1.2'
 gem "font-awesome-rails"
 
 # A Ruby wrapper for the Instagram REST and Search APIs
-gem 'instagram'
+#gem 'instagram'
 
 # Sass-powered version of Bootstrap
 gem 'bootstrap-sass', '~> 3.0.3.0'
