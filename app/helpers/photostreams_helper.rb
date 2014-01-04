@@ -1,16 +1,21 @@
 module PhotostreamsHelper
-  # def authorize
-  #   auth_uri = 'https://instagram.com/oauth/authorize/?client_id=66a938cd0d1d44f6a693343b0af2a186&redirect_uri=http://localhost:3000&response_type=code';
-  #   response = open(auth_uri).read
-  #   parse = JSON.parse(response)
+  def authorize
+    auth_uri = 'https://instagram.com/oauth/authorize/?client_id='+@photostreams[0].client_id+'&redirect_uri=http://petskids.com:3000&response_type=code';
+    response = open(auth_uri).read
 
-  #   if parse["error"] =="access_denied"
-  #     raise parse[error_description]
-  #   else
-  #     return parse["code"] unless parse["code"].nil?  
-  #   end 
-  # end
 
+    puts "----------------------------------------"
+    puts response
+    puts "=========================================="
+
+    # if parse["error"] == "access_denied"
+    #   raise parse[error_description]
+    # elsif parse["code"] == 400
+    #   raise parse[error_message]
+    # else
+    #   return response.code unless response.code.nil?  
+    # end 
+  end
 
   def photos_count
     tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostreams[0].tag1 + "?access_token=" + @photostreams[0].access_token

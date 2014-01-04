@@ -26,8 +26,8 @@ $(document).ready(function() {
     });
 
 	// $('#btnPopular').on('click', function() {
- //    	// var uri = "https://api.instagram.com/v1/media/popular?access_token=" + <%= @photostreams[0].access_token %>
- //    	alert("popular");
+ //    	var uri = "https://api.instagram.com/v1/media/popular?access_token=" + <%= @photostreams[0].access_token %>
+ //        alert(uri); 
  //  	})
 
 	// $('#btnSearch').on('click', function() {

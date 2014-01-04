@@ -35,8 +35,8 @@ class PhotostreamsController < ApplicationController
     @news = []
     @rr_profile = []
     @MAX_MEDIA = 0
-    @user_name = 'melissadj'
-    @user_id = '194168177'
+    @user_name =  @photostreams[0].username;
+    @user_id = @photostreams[0].user_id;
     @follow = false;
 
     if @photostreams.nil? 
@@ -93,7 +93,7 @@ class PhotostreamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photostream_params
-      params.require(:photostream).permit(:client_id, :secret_code, :access_token)
+      params.require(:photostream).permit(:client_id, :secret_code, :access_token, :user_id, :username, :rr_user_id)
     end
 
     # def set_instagram_acct
