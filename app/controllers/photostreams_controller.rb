@@ -4,32 +4,11 @@ class PhotostreamsController < ApplicationController
   require 'uri'
   require 'net/http'
 
-  # def authorize
-  #   @instagram_accts = InstagramAcct.all
-  #   @temp_code = authorize["code"]
-  #   puts @temp_code
-  # end
-
-  # def create
-  #   # POST /instagram_accts
-  #   # POST /instagram_accts.json
-  #   @instagram_acct = InstagramAcct.new(instagram_acct_params)
-
-  #   respond_to do |format|
-  #     if @instagram_acct.save
-  #       format.html { redirect_to @instagram_acct, notice: 'Instagram acct was successfully created.' }
-  #       format.json { head :no_content }
-  #     else
-  #       format.html { render action: 'new' }
-  #       format.json { render json: @instagram_acct.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
   # GET /photostreams
   # GET /photostreams.json
   def index
-    @photostreams = Photostream.all
+    #@photostreams = Photostream.find(params[:id]);
+    @photostreams = Photostream.all;
     @news_query = Photostream.pluck(:feed1)
     @photos = []
     @news = []
@@ -40,8 +19,23 @@ class PhotostreamsController < ApplicationController
     @follow = false;
 
     if @photostreams.nil? 
-      flash[:alert] = "Roaming Rover Error 200: Client Code Information is missing! Contact technical support."
-      redirect_to root_path, flash[:alert]
+      flash[:alert] = "PetsKids needs to access your instagram account."
+      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id='+@photostreams[0].client_id+'&redirect_uri=http://petskids.com:3000&response_type=code';
+      response = open(auth_uri).read
+
+      puts "----------------------------------------"
+      puts response
+      puts "=========================================="
+
+    # if parse["error"] == "access_denied"
+    #   raise parse[error_description]
+    # elsif parse["code"] == 400
+    #   raise parse[error_message]
+    # else
+    #   return response.code unless response.code.nil?  
+    # end 
+
+      #redirect_to @auth_uri, flash[:alert]
     else
       @tag_count = photos_count["media_count"]
 
@@ -96,12 +90,4 @@ class PhotostreamsController < ApplicationController
       params.require(:photostream).permit(:client_id, :secret_code, :access_token, :user_id, :username, :rr_user_id)
     end
 
-    # def set_instagram_acct
-    #   @instagram_acct = InstagramAcct.find(params[:id])
-    # end
-
-    # # Never trust parameters from the scary internet, only allow the white list through.
-    # def instagram_acct_params
-    #   params.require(:instagram_acct).permit(:access_token, :instagram_user_id, :username, :full_name, :profile_pic, :user_id)
-    # end    
 end

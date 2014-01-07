@@ -30,11 +30,11 @@ gem 'jbuilder', '~> 1.2'
 # twitter bootstrap font icons
 gem "font-awesome-rails"
 
-# A Ruby wrapper for the Instagram REST and Search APIs
-#gem 'instagram'
-
 # Sass-powered version of Bootstrap
 gem 'bootstrap-sass', '~> 3.0.3.0'
+
+# Devise is a flexible authentication solution for Rails based on Warden.
+gem 'devise'
 
 group :development do
   gem 'rails_layout'

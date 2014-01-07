@@ -1,5 +1,11 @@
 InstagramApp::Application.routes.draw do
-  resources :instagram_accts, :photostreams
+  devise_for :admins
+  devise_for :users
+  resources :photostreams
+
+  get "pages/index"  => "pages#index"
+  get "photostreams/index"  => "photostreams#index"
+
   root :to => 'photostreams#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

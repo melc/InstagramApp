@@ -27,9 +27,9 @@ include:
 
 - count number of company's instagram media, followers and followings [complete]
 
-- click on button "popular" to display recent popular media for specific tag(s) [complete]
+- click on button "popular" to display recent popular media for specific tag(s) [in progress]
 
-- click on button "search" to open inputbox for searching 220 media based on specific tags [complete]
+- click on button "search" to open inputbox for searching 220 media based on specific tags [in progress]
 
 - click on button "follow" to allow user follow your company on instagram [in progress]
 
@@ -38,5 +38,5 @@ include:
 - click on button "comment" to allow user comment the media on instagram [incomplete]
 
 ***
-![Instagram App Front Page](http://twinpets.com/Content/images/pet_boarding.png)
+![Instagram App Front Page](http://twinpets.com/Content/images/Instagram.png)
 
