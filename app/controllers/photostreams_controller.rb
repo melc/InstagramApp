@@ -20,7 +20,7 @@ class PhotostreamsController < ApplicationController
 
     if @photostreams.nil? 
       flash[:alert] = "PetsKids needs to access your instagram account."
-      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id='+@photostreams[0].client_id+'&redirect_uri=http://petskids.com:3000&response_type=code';
+      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id='+@photostreams[0].client_id+'&redirect_uri=https://clappaws.org&response_type=code';
       response = open(auth_uri).read
 
       puts "----------------------------------------"
