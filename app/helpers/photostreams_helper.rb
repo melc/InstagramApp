@@ -1,5 +1,6 @@
 module PhotostreamsHelper
   def photos_count
+
     tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostreams[0].tag1 + "?access_token=" + @photostreams[0].access_token
     response = open(tag_count_uri).read
     parse = JSON.parse(response)

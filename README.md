@@ -38,5 +38,5 @@ include:
 - click on button "comment" to allow user comment the media on instagram [incomplete]
 
 ***
-![Instagram App Front Page](http://twinpets.com/Content/images/Instagram.png)
+![Instagram App Front Page](https://clappaws.org/app/assets/images/instagram.png)
 

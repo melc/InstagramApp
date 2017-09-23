@@ -1,3 +1,14 @@
+#  Create Instagram account to get client_id and client_secret
+#  Generate Access Token to execute the following code
+#  https://api.instagram.com/oauth/authorize/?client_id=<CLIENT-ID>&redirect_uri=<domain>&response_type=code
+#  http://<domain>?code=<CODE>
+#    curl -F 'client_id=<CLIENT_ID>' \
+#    -F 'client_secret=<CLIENT_SECRET>' \
+#    -F 'grant_type=authorization_code' \
+#    -F 'redirect_uri=<domain>' \
+#    -F 'code=<CODE>' \
+#  https://api.instagram.com/oauth/access_token
+
 class PhotostreamsController < ApplicationController
   include PhotostreamsHelper
   require 'open-uri'
@@ -8,7 +19,7 @@ class PhotostreamsController < ApplicationController
   # GET /photostreams.json
   def index
     #@photostreams = Photostream.find(params[:id]);
-    @photostreams = Photostream.all;
+    @photostreams = Photostream.all
     @news_query = Photostream.pluck(:feed1)
     @photos = []
     @news = []
@@ -18,9 +29,9 @@ class PhotostreamsController < ApplicationController
     @user_id = @photostreams[0].user_id;
     @follow = false;
 
-    if @photostreams.nil? 
-      flash[:alert] = "PetsKids needs to access your instagram account."
-      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id='+@photostreams[0].client_id+'&redirect_uri=https://clappaws.org&response_type=code';
+    if @photostreams.nil?
+      flash[:alert] = "ClapPaws needs to access your instagram account."
+      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id='+@photostreams[0].client_id+'&redirect_uri=https://clappaws.org&response_type=code'
       response = open(auth_uri).read
 
       puts "----------------------------------------"

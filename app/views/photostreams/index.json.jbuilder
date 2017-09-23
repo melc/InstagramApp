@@ -1,4 +1,4 @@
-json.array!(@photostreams) do |photostream|
+djson.array!(@photostreams) do |photostream|
   json.extract! photostream, :id, :client_id, :secret_code, :access_token
   json.url photostream_url(photostream, format: :json)
 end
