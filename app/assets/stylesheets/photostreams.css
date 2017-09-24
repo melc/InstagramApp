@@ -1,7 +1,26 @@
 /* reformat bootstrap features  */
+.navbar-fixed-top {
+    background: #385a7f !important;
+    background: -webkit-linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* Standard syntax (must be last) */
+}
 .navbar-brand {
-    font-size: 90%;
+    font-size: 110%;
     font-weight: bold;
+    color: white !important;
+}
+
+.panel-title.news-title {
+    background-color: rgb(224, 234, 197);
+    color: rgb(16, 11, 68) !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    padding-left: 10px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    margin-bottom: 8px !important;
 }
 
 .carousel-inner {
@@ -115,7 +134,7 @@
     line-height: 30px !important;
     min-height: 30px !important;
 
-    text-align: center !important;
+    text-align: left !important;
     padding-left: 10px !important;
     border-radius: 5px !important;
 
@@ -300,5 +319,9 @@ photostream.logo {
 
 .comment_color:hover {
     color: #4099FF;
+}
+
+#btnPopular  {
+    color: white !important;
 }
 

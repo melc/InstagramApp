@@ -33,8 +33,17 @@ gem 'font-awesome-rails', '~> 4.1.0.0'
 # Sass-powered version of Bootstrap
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
+# Instagram
+gem 'instagram'
+
 # Sprockets version of rails
 gem 'sprockets'
+
+# Oauth2
+gem 'omniauth'
+
+# Instagram oauth2
+gem 'omniauth-instagram', '~> 1.0.2'
 
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'
