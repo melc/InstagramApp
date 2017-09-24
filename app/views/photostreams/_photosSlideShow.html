@@ -10,7 +10,7 @@
                 <ul class="row fivecolumns">
                   <% photo5.each do |photo| %>
                     <li class="col-md-2 col-sm-2 col-lg-2 inline">
-                      <a href="<%= photo["link"] %>" target="_blank" class="thumbnail">
+                      <a href="<%= photo['link'] %>" target="_blank" class="thumbnail">
                         <img src="<%= photo['images']['thumbnail']['url'] %>" class="imgThumbnail"></img>
                         <div class="imgCaption">&nbsp;
                           <i class='fa fa-heart heart_color' style='font-weight:bold'></i>&nbsp;<%= photo['likes']['count'] %>&nbsp;

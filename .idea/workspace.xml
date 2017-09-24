@@ -5,39 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92f0ea94-261d-4d5d-9233-24c28457921c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/bx_loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/photostreams.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_reformat.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/framework_and_overrides.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/photostreams.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/bxslider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/bxslider.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bxslider_reformat.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bxslider_reformat.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/page.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/page.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_messages.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/_navigation_links.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation_links.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/page/controller.html.erb" afterPath="$PROJECT_DIR$/app/views/page/controller.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/page/index.html.erb" afterPath="$PROJECT_DIR$/app/views/page/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html.erb" afterPath="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/photostreams/_rrAccount.html.erb" afterPath="$PROJECT_DIR$/app/views/photostreams/_rrAccount.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/photostreams/_rrCounts.html.erb" afterPath="$PROJECT_DIR$/app/views/photostreams/_rrCounts.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/photostreams/_rrFollow.html.erb" afterPath="$PROJECT_DIR$/app/views/photostreams/_rrFollow.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/photostreams/_rrNews.html.erb" afterPath="$PROJECT_DIR$/app/views/photostreams/_rrNews.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/photostreams/authorize.html.erb" afterPath="$PROJECT_DIR$/app/views/photostreams/authorize.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/controls.png" afterPath="$PROJECT_DIR$/app/assets/images/controls.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/InstagramApp.iml" afterPath="$PROJECT_DIR$/.idea/InstagramApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/photostreams_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/photostreams_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/photostreams_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/photostreams_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/photostreams.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/photostreams.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html" afterPath="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html" />
     </list>
     <ignored path="InstagramApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +39,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>http</find>
       <find>http:</find>
       <find>instagram</find>
       <find>access_token</find>
@@ -100,6 +68,7 @@
       <find>.logo</find>
       <find>logo</find>
       <find>bx-has-pager</find>
+      <find>bxslid</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/db</dir>
@@ -122,7 +91,6 @@
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/config/initializers/secret_token.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/photostreams.js" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" />
         <option value="$PROJECT_DIR$/app/views/photostreams/_rrNews.html.erb" />
@@ -138,13 +106,14 @@
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/photostreams.css" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/bxslider.css" />
-        <option value="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html" />
         <option value="$PROJECT_DIR$/app/views/photostreams/_rrAccount.html" />
         <option value="$PROJECT_DIR$/app/views/layouts/_messages.html" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation_links.html" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/photostreams.css" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/photostreams.js" />
       </list>
     </option>
   </component>
@@ -224,6 +193,18 @@
               <item name="InstagramApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="InstagramApp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InstagramApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InstagramApp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InstagramApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InstagramApp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -232,6 +213,13 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InstagramApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InstagramApp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="photostreams" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InstagramApp" type="b2602c69:ProjectViewProjectNode" />
@@ -366,12 +354,12 @@
       <workItem from="1506106985644" duration="11000" />
       <workItem from="1506107016545" duration="3000" />
       <workItem from="1506117095792" duration="37154000" />
-      <workItem from="1506194686330" duration="33750000" />
+      <workItem from="1506194686330" duration="35930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75496000" />
+    <option name="totallyTimeSpent" value="77676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="30" width="1310" height="783" extended-state="6" />
@@ -476,26 +464,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/photostreams_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/photostreams/_rrCounts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/photostreams/_rrNews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -564,26 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/photostreams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/photostreams_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -670,7 +626,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -711,14 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -807,8 +755,48 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/photostreams/_rrNews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/photostreams_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/photostreams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

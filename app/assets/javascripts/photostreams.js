@@ -22,7 +22,8 @@ $(document).ready(function() {
         speed: 2000,
         pause: 8000,
         autoHover: true,
-        controls: false
+        controls: false,
+        pager: false
     });
 
 	// $('#btnPopular').on('click', function() {
