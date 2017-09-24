@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -28,10 +28,13 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # twitter bootstrap font icons
-gem "font-awesome-rails"
+gem 'font-awesome-rails', '~> 4.1.0.0'
 
 # Sass-powered version of Bootstrap
 gem 'bootstrap-sass', '~> 3.0.3.0'
+
+# Sprockets version of rails
+gem 'sprockets'
 
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'

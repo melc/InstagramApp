@@ -1,6 +1,14 @@
 module PhotostreamsHelper
-  def photos_count
 
+  def valid_json?(response)
+    begin
+      !!JSON.parse(response)
+    rescue JSON::ParserError
+      false
+    end
+  end
+
+  def photos_count
     tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostreams[0].tag1 + "?access_token=" + @photostreams[0].access_token
     response = open(tag_count_uri).read
     parse = JSON.parse(response)
@@ -43,11 +51,13 @@ module PhotostreamsHelper
   end
 
   def rr_news
-    news_uri = "https://ajax.googleapis.com/ajax/services/search/news?v=1.0&rsz=8&q=" + @news_query[0]
+    news_uri = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + @news_query[0] + "&count=50&mkt=en-us&subscription-key=8a496e5015c84227b65c8f0522cfe9ef"
 
     rr_response = open(URI.escape(news_uri)).read
+    puts(rr_response)
     rr_parse = JSON.parse(rr_response)
-    rr_jsonResults = rr_parse["responseData"]["results"]
+
+    rr_jsonResults = rr_parse["value"]            # name, url, image (.thumbnail.contentUrl), description, datePublished
 
     return rr_jsonResults
   end

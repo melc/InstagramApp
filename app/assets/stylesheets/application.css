@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require font-awesome
+ *= require bootstrap
+ *= require photostreams
  *= require_tree .
  */

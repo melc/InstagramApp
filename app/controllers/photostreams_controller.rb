@@ -25,45 +25,47 @@ class PhotostreamsController < ApplicationController
     @news = []
     @rr_profile = []
     @MAX_MEDIA = 0
-    @user_name =  @photostreams[0].username;
-    @user_id = @photostreams[0].user_id;
-    @follow = false;
+    @follow = false
 
-    if @photostreams.nil?
-      flash[:alert] = "ClapPaws needs to access your instagram account."
-      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id='+@photostreams[0].client_id+'&redirect_uri=https://clappaws.org&response_type=code'
-      response = open(auth_uri).read
+    if @photostreams.blank?
+      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id=' + @photostreams[0].client_id +
+          '&redirect_uri=https://clappaws.org&response_type=code&scope=basic+public_content+likes+relationships+follower_list+comments'
+      response = open(@auth_uri).read
 
-      puts "----------------------------------------"
-      puts response
-      puts "=========================================="
+      if valid_json?(response)
 
-    # if parse["error"] == "access_denied"
-    #   raise parse[error_description]
-    # elsif parse["code"] == 400
-    #   raise parse[error_message]
-    # else
-    #   return response.code unless response.code.nil?  
-    # end 
+        if JSON.parse(response)["error"] == "access_denied"
+          raise JSON.parse(response)[error_description]
+        elsif JSON.parse(response)["code"] == 400
+          raise JSON.parse(response)[error_message]
+        else
+          return response.code unless response.code.blank?
+        end
+      end
 
-      #redirect_to @auth_uri, flash[:alert]
+      flash[:alert] = "ClapPaws needs to access your instagram account"
+      redirect_to @auth_uri
     else
+      @user_name =  @photostreams[0].username
+      @user_id = @photostreams[0].user_id
       @tag_count = photos_count["media_count"]
-
       if @tag_count > 0
         # GET photos based on tag 'dogwalk'
         first_photos_slideshow.each do |result|
-          @photos << result unless result["images"]["thumbnail"]["url"].nil? 
+            @photos << result unless result["images"]["thumbnail"]["url"].nil?
         end
         
         for i in 1..10    # 10 pages, 20 media per page
-          next_photos_slideshow.each do |result|
+          unless next_photos_slideshow.blank?
+            next_photos_slideshow.each do |result|
               @photos << result unless result["images"]["thumbnail"]["url"].nil?
+            end
           end
+          puts(@photos)
         end
       else
         flash[:alert] = "No photo found for this tag '" + @photostreams[0].tags1 + "'"
-        redirect_to root_path, flash[:alert]
+        redirect_to root_path
       end
 
       # GET roaming rover account  basic information: media, followers, and followerings
@@ -72,7 +74,7 @@ class PhotostreamsController < ApplicationController
       # GET roaming rover dog news from google newsgroup
       unless @news_query.nil? 
         rr_news.each do |result|
-          @news << result unless result["title"].nil?
+          @news << result unless result["name"].nil?
         end
       end
 

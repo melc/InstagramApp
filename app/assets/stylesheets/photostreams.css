@@ -1,0 +1,304 @@
+/* reformat bootstrap features  */
+.navbar-brand {
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.carousel-inner {
+    min-height: 640px;
+}
+
+/* reset grid columns for 5 equal length columns.*/
+@media (min-width: 768px) {
+    .fivecolumns .col-sm-2 {
+        width: 20%;
+        *width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fivecolumns .col-lg-2 {
+        width: 20%;
+        *width: 20%;
+    }
+}
+@media (min-width: 992px) {
+    .fivecolumns .col-md-2 {
+        width: 20%;
+        *width: 20%;
+    }
+}
+
+/* reformat bxslider  */
+.bx-viewport {
+    margin-left: 5px;
+}
+
+/* Place all the styles related to the photostreams controller here.
+   They will automatically be included in application.css.
+   You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+
+.photostream {
+	font-size: small;
+	font-family: franklin gothic medium condensed, arial, sans serif;
+}
+
+.photostream ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.photostream.inline {
+    display: inline;
+}
+
+.photostream .thumbnail {
+    margin: 0 -10px 5px -10px;
+    border: 2px outset silver !important;
+    border-radius: 5px !important;
+}
+
+.photostream .thumbnail:hover {
+    opacity: 0.5;
+}
+
+.twitter-blue {
+    color: white;
+}
+
+.facebook-blue,.cntSeq {
+    color: white;
+}
+
+.googleplus-red {
+    color: white;
+}
+
+.youtube-red {
+    color: white;
+}
+
+.pinterest-red {
+    color: white;
+}
+
+.instagram-blue {
+    color: #3f729b;
+}
+
+.iconStyle {
+    width: 26px !important;
+}
+
+.logoDIV > a > .logo  {
+    width: 114px;
+    height: 114px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.logoDIV a:hover .logo {
+    opacity: 0.5 !important;
+}
+
+.photostream.panel.panel-box {
+    margin-top: 60px;
+}
+
+.photostream.panel-title.default-title {
+
+    color: white;
+    font-weight: bold;
+    height: 30px !important;
+    line-height: 30px !important;
+    min-height: 30px !important;
+
+    text-align: center !important;
+    padding-left: 10px !important;
+    border-radius: 5px !important;
+
+    background: #45484d; /* Old browsers */
+    background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.photostream.panel-title.default-title li
+{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+.photostream.panel-body.default-body {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+.rrwebsite a:link {
+    font-size: 14px;
+    font-weight: bold;
+    color: darkred;
+}
+
+photostream.logo {
+    width: 114px;
+    height: 114px;
+    border: 1px inset darkgrey;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+/* instagram icon setup */
+.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-16 { width: 16px; height: 16px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-16.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .ig-b-16 {
+        background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-16@2x.png);
+        background-size: 60px 178px;
+    } }
+
+.instagram-blue {
+    padding-top:20px;
+    padding-left: 15px;
+}
+
+.cntSeq {
+    font-size: 18px;
+    color: #4099FF;
+    width: 100% !important;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.cntSeqLabel {
+    padding-bottom: 5px;
+}
+
+.countDisplay {
+    margin-top: 10px !important;
+    text-align: center;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.photobody a:hover img {
+    opacity: 0.5;
+}
+
+
+.photobody a:hover {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+.user_id_box {
+    padding-top:20px;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+}
+
+.photostream.news-panel {
+    margin: 0 -15px;
+    height: 100%;
+    width: 105%;
+    padding-bottom: 10px;
+}
+
+.photostream.news-title {
+    font-size: small;
+    color: navy;
+    background-color: #E8EBD5;
+    font-weight: bold;
+    height: 25px !important;
+    line-height: 25px !important;
+    min-height: 25px !important;
+
+    text-align: center !important;
+    padding-left: 10px !important;
+    border-radius: 5px !important;
+
+}
+
+.news-body {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    word-break: break-all; /* webkit /
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: -moz-pre-wrap; / fennec /
+	white-space: pre-wrap;
+	white-space: pre\9; / IE7+ */
+}
+
+
+#news_div {
+    height: 135px;
+    margin: -15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width:  calc(115% + 18px);
+    overflow-y: scroll;
+}
+
+.newsDIV {
+    padding-bottom: 10px !important;
+}
+
+.news_title {
+    font-weight: bold;
+    font-size: x-small;
+}
+
+.news_date {
+    font-size: xx-small;
+}
+
+.news_url a:link {
+    color: blue;
+    font-size: x-small;
+}
+
+.news_url a:hover {
+    color: purple;
+}
+
+.imgThumbnail {
+    position: relative;
+}
+
+.imgCaption {
+    position: absolute;
+    top: 5%;
+    background: black;
+    opacity: 0.9;
+    font-size: x-small;
+}
+
+.imgCaption:hover {
+    opacity: 1 !important;
+}
+
+.heart_color, .comment_color {
+    color: white;
+}
+
+.heart_color:hover {
+    color: #b31217;
+}
+
+.comment_color:hover {
+    color: #4099FF;
+}
+
