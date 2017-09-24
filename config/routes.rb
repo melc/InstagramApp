@@ -1,9 +1,9 @@
 InstagramApp::Application.routes.draw do
-  devise_for :admins
+
+  get "page/index"
   devise_for :users
   resources :photostreams
 
-  get "pages/index"  => "pages#index"
   get "photostreams/index"  => "photostreams#index"
 
   root :to => 'photostreams#index'
@@ -58,7 +58,7 @@ InstagramApp::Application.routes.draw do
 
   # Example resource route within a namespace:
   #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # Directs /admin/products/* to AdminOld::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end

@@ -11,6 +11,6 @@
  *= require_self
  *= require font-awesome
  *= require bootstrap
- *= require photostreams
+ *= require bxslider
  *= require_tree .
  */

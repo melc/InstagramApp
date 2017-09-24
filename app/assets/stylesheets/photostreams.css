@@ -1,11 +1,12 @@
 /* reformat bootstrap features  */
 .navbar-fixed-top {
     background: #385a7f !important;
-    background: -webkit-linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #385a7f, rgb(64, 91, 122)) !important; /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(to bottom right, #215792, rgba(76, 123, 177, 0.78)) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to bottom right, #215792, rgba(76, 123, 177, 0.78)) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to bottom right, #215792, rgba(76, 123, 177, 0.78)) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #215792, rgba(76, 123, 177, 0.78)) !important; /* Standard syntax (must be last) */
 }
+
 .navbar-brand {
     font-size: 110%;
     font-weight: bold;
@@ -323,5 +324,6 @@ photostream.logo {
 
 #btnPopular  {
     color: white !important;
+    font-size: small;
 }
 

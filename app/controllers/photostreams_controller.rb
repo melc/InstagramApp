@@ -61,7 +61,6 @@ class PhotostreamsController < ApplicationController
               @photos << result unless result["images"]["thumbnail"]["url"].nil?
             end
           end
-          puts(@photos)
         end
       else
         flash[:alert] = "No photo found for this tag '" + @photostreams[0].tags1 + "'"
