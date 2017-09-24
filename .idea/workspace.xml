@@ -2,39 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92f0ea94-261d-4d5d-9233-24c28457921c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/bx_loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/controls.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/page.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bxslider_reformat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/page.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/page_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/page_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/page/controller.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/page/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20140104163454_devise_create_users.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/bxslider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/bxslider.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/admin.rb" afterPath="$PROJECT_DIR$/app/models/admin_old.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise_old.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/locales/devise.en.yml" afterPath="$PROJECT_DIR$/config/locales/devise.en_old.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/fixtures/admins.yml" afterPath="$PROJECT_DIR$/test/fixtures/admin_olds.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/fixtures/users.yml" afterPath="$PROJECT_DIR$/test/fixtures/user_olds.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/InstagramApp.iml" afterPath="$PROJECT_DIR$/.idea/InstagramApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/photostreams.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/photostreams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/photostreams.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/photostreams.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/photostreams_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/photostreams_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html" afterPath="$PROJECT_DIR$/app/views/layouts/application.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/page_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/page_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photostreams/_rrAccount.html" afterPath="$PROJECT_DIR$/app/views/photostreams/_rrAccount.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photostreams/_rrCounts.html" afterPath="$PROJECT_DIR$/app/views/photostreams/_rrCounts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photostreams/_rrNews.html" afterPath="$PROJECT_DIR$/app/views/photostreams/_rrNews.html" />
     </list>
     <ignored path="InstagramApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +30,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="photostreams.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="photostreams.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/photostreams.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="329">
               <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_rrAccount.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/photostreams/_rrAccount.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation_links.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation_links.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="56" lean-forward="false" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -98,8 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tag_count_uri</find>
-      <find>response</find>
       <find>next_max_id</find>
       <find>min_id</find>
       <find>rr_dog</find>
@@ -128,6 +119,8 @@
       <find>photostreams.js</find>
       <find>loader</find>
       <find>rr_icon</find>
+      <find>roaming rover</find>
+      <find>roamingrover</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/db</dir>
@@ -164,7 +157,6 @@
         <option value="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_reformat.css" />
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/photostreams/_rrAccount.html" />
         <option value="$PROJECT_DIR$/app/views/layouts/_messages.html" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation_links.html" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/photostreams.css" />
@@ -182,6 +174,7 @@
         <option value="$PROJECT_DIR$/app/views/photostreams/_photosSlideShow.html" />
         <option value="$PROJECT_DIR$/app/controllers/photostreams_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/photostreams.js" />
+        <option value="$PROJECT_DIR$/app/views/photostreams/_rrAccount.html" />
       </list>
     </option>
   </component>
@@ -448,16 +441,15 @@
       <workItem from="1506117095792" duration="37154000" />
       <workItem from="1506194686330" duration="39374000" />
       <workItem from="1506267408706" duration="4737000" />
-      <workItem from="1506272414559" duration="6167000" />
+      <workItem from="1506272414559" duration="7168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92024000" />
+    <option name="totallyTimeSpent" value="93025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="30" width="1310" height="783" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33254343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -547,17 +539,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation_links.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -565,13 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/photostreams/_rrAccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -602,6 +583,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -820,8 +802,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/photostreams.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="329">
           <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/photostreams/_rrAccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation_links.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="56" lean-forward="false" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
           <folding />
         </state>
       </provider>

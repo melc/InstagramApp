@@ -67,24 +67,24 @@ class PhotostreamsController < ApplicationController
         redirect_to root_path
       end
 
-      # GET roaming rover account  basic information: media, followers, and followerings
+      # GET ClapPaws account  basic information: media, followers, and followerings
       @rr_profile << rr_profile unless rr_profile["counts"].nil?
 
-      # GET roaming rover dog news from google newsgroup
+      # GET ClapPaws dog news from google newsgroup
       unless @news_query.nil? 
         rr_news.each do |result|
           @news << result unless result["name"].nil?
         end
       end
 
-      # GET roaming rover followed by list to check if user is a follower.
+      # GET ClapPaws followed by list to check if user is a follower.
       rr_follow.each do |follow|
         if follow["id"] == @user_id
           @follow = true
         end
       end
 
-      # Update roaming rover login user's following on roaming rover
+      # Update ClapPaws login user's following on ClapPaws
       # open_relationship_uri = "https://api.instagram.com/v1/users/" + @photostreams[0].user_id + "/relationship?access_token=" + @photostreams[0].access_token
 
     end
