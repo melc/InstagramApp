@@ -304,6 +304,8 @@ photostream.logo {
     background: black;
     opacity: 0.9;
     font-size: x-small;
+    color: #fffffc;
+    font-weight: 600;
 }
 
 .imgCaption:hover {
