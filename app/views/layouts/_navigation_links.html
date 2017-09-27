@@ -9,5 +9,7 @@
                 <img src="//badges.instagram.com/static/images/ig-badge-16.png" alt="Instagram" />
         </a>
 <li>
-<li class="user_id_box"><%= @photostreams[0].username %></li>
-
+<% if user_signed_in? %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'logout' %>
+<% end %>
+</li>

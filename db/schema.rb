@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170924155459) do
+ActiveRecord::Schema.define(version: 20170926235720) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -32,21 +32,25 @@ ActiveRecord::Schema.define(version: 20170924155459) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "photostreams", force: true do |t|
-    t.string   "client_id"
-    t.string   "secret_code"
-    t.string   "access_token"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "user_id"
-    t.string   "tag1"
-    t.string   "tag2"
-    t.string   "tag3"
-    t.string   "feed2"
-    t.string   "feed3"
-    t.string   "feed1"
-    t.string   "username"
-    t.string   "rr_user_id"
+    t.integer "user_id"
+    t.string  "provider"
+    t.string  "access_token"
+    t.string  "uid"
+    t.string  "username"
+    t.string  "fullname"
+    t.integer "media"
+    t.integer "follows"
+    t.integer "followed_by"
+    t.string  "tag1"
+    t.string  "tag2"
+    t.string  "tag3"
+    t.string  "feed1"
+    t.string  "feed2"
+    t.string  "feed3"
   end
+
+  add_index "photostreams", ["user_id"], name: "index_photostreams_on_user_id"
+  add_index "photostreams", ["username"], name: "index_photostreams_on_username", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -61,9 +65,12 @@ ActiveRecord::Schema.define(version: 20170924155459) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "fullname"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

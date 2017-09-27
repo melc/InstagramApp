@@ -9,7 +9,7 @@ module PhotostreamsHelper
   end
 
   def photos_count
-    tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostreams[0].tag1 + "?access_token=" + @photostreams[0].access_token
+    tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 + "?access_token=" + @photostream.access_token
     response = open(tag_count_uri).read
     parse = JSON.parse(response)
     jsonTagCount = parse["data"]
@@ -28,7 +28,7 @@ module PhotostreamsHelper
   end
 
   def first_photos_slideshow
-  	uri = "https://api.instagram.com/v1/tags/" + @photostreams[0].tag1 + "/media/recent?access_token=" + @photostreams[0].access_token
+  	uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 + "/media/recent?access_token=" + @photostream.access_token
     photos_slideshow(uri)
  	end
 
@@ -39,36 +39,36 @@ module PhotostreamsHelper
     end
   end
 
-	def rr_profile
-		open_rr_uri = "https://api.instagram.com/v1/users/" + 
-                  @photostreams[0].user_id + "/?access_token=" + 
-                  @photostreams[0].access_token
-  	rr_response = open(open_rr_uri).read
-  	rr_parse = JSON.parse(rr_response)
-  	rr_jsonResults = rr_parse["data"]
+	def profile
+		open_uri = "https://api.instagram.com/v1/users/" +
+                  @photostream.uid + "/?access_token=" +
+                  @photostream.access_token
+  	response = open(open_uri).read
+  	parse = JSON.parse(response)
+  	jsonResults = parse["data"]
   	
-    return rr_jsonResults
+    return jsonResults
   end
 
-  def rr_news
-    news_uri = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + @news_query[0] + "&count=50&mkt=en-us&subscription-key=8a496e5015c84227b65c8f0522cfe9ef"
+  def news_bar
 
-    rr_response = open(URI.escape(news_uri)).read
-    puts(rr_response)
-    rr_parse = JSON.parse(rr_response)
+    news_uri = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + @photostream.feed1 + "&count=50&mkt=en-us&subscription-key=" + ENV["BING_ID"]
 
-    rr_jsonResults = rr_parse["value"]            # name, url, image (.thumbnail.contentUrl), description, datePublished
+    response = open(URI.escape(news_uri)).read
+    parse = JSON.parse(response)
 
-    return rr_jsonResults
+    jsonResults = parse["value"]            # name, url, image (.thumbnail.contentUrl), description, datePublished
+
+    return jsonResults
   end
 
-  def rr_follow
-    follows_uri = "https://api.instagram.com/v1/users/" + @photostreams[0].user_id + 
-                    "/followed-by?access_token=" + @photostreams[0].access_token  
-    rr_response = open(follows_uri).read
-    rr_parse = JSON.parse(rr_response)
-    rr_jsonResults = rr_parse["data"]
+  def follow
+    follows_uri = "https://api.instagram.com/v1/users/" + @photostream.uid +
+                    "/followed-by?access_token=" + @photostream.access_token
+    response = open(follows_uri).read
+    parse = JSON.parse(response)
+    jsonResults = parse["data"]
 
-    return rr_jsonResults                
+    return jsonResults
  	end
 end

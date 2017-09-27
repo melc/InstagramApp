@@ -5,6 +5,7 @@
       <title><%= content_for?(:title) ? yield(:title) : "Instagram App" %></title>
       <meta name="description" content="<%= content_for?(:description) ? yield(:description) : 'Instagram App' %>">
       <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
       <%= csrf_meta_tags %>

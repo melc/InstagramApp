@@ -39,11 +39,15 @@ gem 'bxslider-rails'
 # Instagram
 gem 'instagram'
 
-# Oauth2
+# omniauth
 gem 'omniauth'
-
-# Instagram oauth2
-gem 'omniauth-instagram', '~> 1.0.2'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-instagram'
+gem 'twitter'
+gem 'instagram'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', '0.8.2', require: 'google/api_client'
 
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'

@@ -1,12 +1,9 @@
 InstagramApp::Application.routes.draw do
 
-  get "page/index"
-  devise_for :users
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
+
   resources :photostreams
-
-  get "photostreams/index"  => "photostreams#index"
-
-  root :to => 'photostreams#index'
+  root :to => "photostreams#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

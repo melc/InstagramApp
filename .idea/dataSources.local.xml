@@ -4,5 +4,10 @@
     <data-source name="Rails InstagramApp: development" uuid="1ae32c8d-34cb-4c0b-b2a4-f668d7bc5ad4">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
+    <data-source name="Rails InstagramApp: test" uuid="daaf4bb2-f5e4-42d6-ad6a-aa80af08a06d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
   </component>
 </project>

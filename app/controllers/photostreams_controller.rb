@@ -15,91 +15,102 @@ class PhotostreamsController < ApplicationController
   require 'uri'
   require 'net/http'
 
+  before_filter :authenticate_user!
   # GET /photostreams
   # GET /photostreams.json
   def index
-    #@photostreams = Photostream.find(params[:id]);
-    @photostreams = Photostream.all
-    @news_query = Photostream.pluck(:feed1)
-    @photos = []
-    @news = []
-    @rr_profile = []
-    @MAX_MEDIA = 0
-    @follow = false
+    # if a login user, display photostream; otherwise, popup sign up/sign in page
+    if user_signed_in?
 
-    if @photostreams.blank?
-      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id=' + @photostreams[0].client_id +
-          '&redirect_uri=https://clappaws.org&response_type=code&scope=basic+public_content+likes+relationships+follower_list+comments'
-      response = open(@auth_uri).read
-
-      if valid_json?(response)
-
-        if JSON.parse(response)["error"] == "access_denied"
-          raise JSON.parse(response)[error_description]
-        elsif JSON.parse(response)["code"] == 400
-          raise JSON.parse(response)[error_message]
-        else
-          return response.code unless response.code.blank?
-        end
+      if (Photostream.find_by uid: current_user.id).nil?
+        @photostream = Photostream.new
+        @photostream.access_token = ENV["INSTAGRAM_ACCESS_TOKEN"]
+        @photostream.uid = ENV["INSTAGRAM_UID"]
+        @photostream.username = current_user.username
+        @photostream.tag1 = ENV["INSTAGRAM_TAG"]
+        @photostream.feed1 = ENV["INSTAGRAM_FEED"]
+        @photostream.media = 0
+        @photostream.follows = 0
+        @photostream.followed_by = 0
+      else
+        @photostream = Photostream.find_by uid: current_user.id
+        @photostream.tag1 = ENV["INSTAGRAM_TAG"]
+        @photostream.feed1 = ENV["INSTAGRAM_FEED"]
       end
 
-      flash[:alert] = "ClapPaws needs to access your instagram account"
-      redirect_to @auth_uri
-    else
-      @user_name =  @photostreams[0].username
-      @user_id = @photostreams[0].user_id
-      @tag_count = photos_count["media_count"]
-      if @tag_count > 0
-        # GET photos based on tag 'dogwalk'
-        first_photos_slideshow.each do |result|
-            @photos << result unless result["images"]["thumbnail"]["url"].nil?
-        end
-        
-        for i in 1..10    # 10 pages, 20 media per page
-          unless next_photos_slideshow.blank?
-            next_photos_slideshow.each do |result|
-              @photos << result unless result["images"]["thumbnail"]["url"].nil?
-            end
+      @photos = []
+      @news = []
+      @follow = false
+
+=begin
+        if valid_json?(response)
+
+          if JSON.parse(response)["error"] == "access_denied"
+            raise JSON.parse(response)[error_description]
+          elsif JSON.parse(response)["code"] == 400
+            raise JSON.parse(response)[error_message]
+          else
+            return response.code unless response.code.blank?
           end
         end
+
+        flash[:alert] = "ClapPaws needs to access your instagram account"
+        redirect_to @auth_uri
+=end
+      @auth_uri = 'https://instagram.com/oauth/authorize/?client_id=' + ENV["INSTAGRAM_CLIENT_ID"] +
+            '&redirect_uri=https://clappaws.org&response_type=code'
+      response = open(@auth_uri).read
+
+      @user_name = current_user.username
+      @user_id = current_user.id
+      @tag_count = photos_count["media_count"]
+
+      if @tag_count > 0
+          first_photos_slideshow.each do |result|
+            @photos << result unless result["images"]["thumbnail"]["url"].nil?
+          end
+
+          for i in 1..10    # 10 pages, 20 media per page
+            unless next_photos_slideshow.blank?
+              next_photos_slideshow.each do |result|
+                @photos << result unless result["images"]["thumbnail"]["url"].nil?
+              end
+            end
+          end
       else
-        flash[:alert] = "No photo found for this tag '" + @photostreams[0].tags1 + "'"
-        redirect_to root_path
+          flash[:alert] = "No photo found for this tag '" + @photostream.tag1 + "'"
+          redirect_to root_path
       end
 
-      # GET ClapPaws account  basic information: media, followers, and followerings
-      @rr_profile << rr_profile unless rr_profile["counts"].nil?
-
       # GET ClapPaws dog news from google newsgroup
-      unless @news_query.nil? 
-        rr_news.each do |result|
+      unless @photostream.feed1.nil?
+        news_bar.each do |result|
           @news << result unless result["name"].nil?
         end
       end
 
-      # GET ClapPaws followed by list to check if user is a follower.
-      rr_follow.each do |follow|
-        if follow["id"] == @user_id
-          @follow = true
+      if !@photostream.blank?
+        # GET ClapPaws followed by list to check if user is a follower.
+        follow.each do |follow|
+          if follow["id"] == ENV["INSTAGRAM_UID"]
+            @follow = true
+          end
         end
       end
-
       # Update ClapPaws login user's following on ClapPaws
-      # open_relationship_uri = "https://api.instagram.com/v1/users/" + @photostreams[0].user_id + "/relationship?access_token=" + @photostreams[0].access_token
+      # open_relationship_uri = "https://api.instagram.com/v1/users/" + @photostream.uid + "/relationship?access_token=" + @photostream.access_token
 
     end
-
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_photostream
-      @photostream = Photostream.find(params[:id])
-    end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_photostream
+        @photostream = Photostream.find(params[:id])
+      end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def photostream_params
-      params.require(:photostream).permit(:client_id, :secret_code, :access_token, :user_id, :username, :rr_user_id)
-    end
-
-end
+      # Never trust parameters from the scary internet, only allow the white list through.
+      def photostream_params
+        params.require(:photostream).permit(:provider, :access_token, :uid, :username, :user_id)
+      end
+  end

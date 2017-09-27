@@ -2,7 +2,11 @@
 <div class="col-md-4">
   <div class="photostream panel panel-box">
     <ul class="photostream panel-title default-title">
-      <li>Profile</li>
+      <li>
+          <% if user_signed_in? %>
+          <%= current_user.username %>
+          <% end %>
+      </li>
       <%= render :partial => 'rrFollow' %>
     </ul>
     <div class="photostream panel-body default-body">
@@ -27,7 +31,7 @@
   <div class="photostream panel">
       <div class="photostream panel-title default-title">Join ClapPaws</div>
       <div class="photostream panel-body default-body">
-        <span>Join our big family and enjoy your time with our members including dog walkers and owners. Visit <span class="rrwebsite"><a href="clappaws.org">our website</a></span> to share your stories and pictures with ClapPaws family members.</span>
+        <span>Join our big family and enjoy your time with our members including dog walkers and owners. Visit <span class="rrwebsite"><a href="#">our website</a></span> to share your stories and pictures with ClapPaws family members.</span>
       </div>            
   </div>
 </div>

@@ -2,19 +2,19 @@
 <div class="row">
   <div class="col-md-4">
     <ul class="countDisplay well">
-      <li class="cntSeq"><%= @rr_profile[0]["counts"]["media"] %></li>
+      <li class="cntSeq"><%= @photostream.media %></li>
       <li class="cntSeqLabel">Photos</li>
     </ul>
   </div>  
   <div class="col-md-4">
     <ul class="countDisplay well">              
-      <li class="cntSeq"><%= @rr_profile[0]["counts"]["followed_by"] %></li>
+      <li class="cntSeq"><%= @photostream.followed_by %></li>
       <li class="cntSeqLabel">Followers</li>
     </ul>
   </div>
   <div class="col-md-4">
     <ul class="countDisplay well">              
-      <li class="cntSeq"><%= @rr_profile[0]["counts"]["follows"] %></li>
+      <li class="cntSeq"><%= @photostream.follows %></li>
       <li class="cntSeqLabel">Followings</li>
     </ul>
   </div> 
