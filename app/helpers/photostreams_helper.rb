@@ -9,7 +9,8 @@ module PhotostreamsHelper
   end
 
   def photos_count
-    tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 + "?access_token=" + @photostream.access_token
+    tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 +
+        "?access_token=" + @photostream.access_token + "&scope=public_content"
     response = open(tag_count_uri).read
     parse = JSON.parse(response)
     jsonTagCount = parse["data"]
@@ -23,7 +24,6 @@ module PhotostreamsHelper
     jsonNextResults = parse["pagination"]
     @next_url = jsonNextResults["next_url"] unless jsonNextResults.nil?
     jsonResults = parse["data"]
-
     return jsonResults
   end
 
@@ -33,7 +33,7 @@ module PhotostreamsHelper
  	end
 
   def next_photos_slideshow
-    unless @next_url.nil?
+    if !@next_url.nil?
       uri = @next_url
       photos_slideshow(uri)
     end
@@ -62,9 +62,18 @@ module PhotostreamsHelper
     return jsonResults
   end
 
+  def counts
+    media_uri = "https://api.instagram.com/v1/users/" + @photostream.uid + "/?access_token=" + @photostream.access_token
+    response = open(URI.escape(media_uri)).read
+    parse = JSON.parse(response)
+
+    jsonResults = parse["data"]["counts"]
+
+    return jsonResults
+  end
+
   def follow
-    follows_uri = "https://api.instagram.com/v1/users/" + @photostream.uid +
-                    "/followed-by?access_token=" + @photostream.access_token
+    follows_uri = "https://api.instagram.com/v1/users/self/follows?access_token=" + @photostream.access_token
     response = open(follows_uri).read
     parse = JSON.parse(response)
     jsonResults = parse["data"]

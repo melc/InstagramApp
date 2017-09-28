@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   def twitter
-    identities.where( :provider => "twitter" ).first
+    photostreams.where( :provider => "twitter" ).first
   end
 
   def twitter_client
@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   end
 
   def facebook
-    identities.where( :provider => "facebook" ).first
+    photostreams.where( :provider => "facebook" ).first
   end
 
   def facebook_client

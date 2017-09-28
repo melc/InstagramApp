@@ -128,6 +128,9 @@
     margin-top: 55px;
 }
 
+.row body {
+
+}
 .photostream.panel-title.default-title {
 
     color: white;
@@ -392,4 +395,10 @@ hr {
 
 .signup.row {
     margin-top: 55px;
+}
+
+.privacy.modal-title  {
+    font-weight: 600;
+    text-align: left;
+    font-size: 24px;
 }

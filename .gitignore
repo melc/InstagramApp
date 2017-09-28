@@ -16,4 +16,4 @@
 /tmp
 
 # Ignore environments variables
-config/local_environment.yml
+/config/local_environment.yml

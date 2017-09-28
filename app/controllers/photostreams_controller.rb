@@ -22,7 +22,7 @@ class PhotostreamsController < ApplicationController
     # if a login user, display photostream; otherwise, popup sign up/sign in page
     if user_signed_in?
 
-      if (Photostream.find_by uid: current_user.id).nil?
+      if (Photostream.find_by user_id: current_user.id).nil?
         @photostream = Photostream.new
         @photostream.access_token = ENV["INSTAGRAM_ACCESS_TOKEN"]
         @photostream.uid = ENV["INSTAGRAM_UID"]
@@ -33,12 +33,18 @@ class PhotostreamsController < ApplicationController
         @photostream.follows = 0
         @photostream.followed_by = 0
       else
-        @photostream = Photostream.find_by uid: current_user.id
+        @photostream = Photostream.find_by user_id: current_user.id
         @photostream.tag1 = ENV["INSTAGRAM_TAG"]
         @photostream.feed1 = ENV["INSTAGRAM_FEED"]
+        @photostream.media = counts["media"]
+        @photostream.follows = counts["follows"]
+        @photostream.followed_by = counts["followed_by"]
+        @photostream.save
+
       end
 
       @photos = []
+      @next_url = []
       @news = []
       @follow = false
 
@@ -58,10 +64,9 @@ class PhotostreamsController < ApplicationController
         redirect_to @auth_uri
 =end
       @auth_uri = 'https://instagram.com/oauth/authorize/?client_id=' + ENV["INSTAGRAM_CLIENT_ID"] +
-            '&redirect_uri=https://clappaws.org&response_type=code'
+            '&redirect_uri=http://clappaws.org/users/auth/instagram/callback&response_type=code&scope=public_content'
       response = open(@auth_uri).read
 
-      @user_name = current_user.username
       @user_id = current_user.id
       @tag_count = photos_count["media_count"]
 
@@ -71,7 +76,7 @@ class PhotostreamsController < ApplicationController
           end
 
           for i in 1..10    # 10 pages, 20 media per page
-            unless next_photos_slideshow.blank?
+            unless @next_url.blank?
               next_photos_slideshow.each do |result|
                 @photos << result unless result["images"]["thumbnail"]["url"].nil?
               end
@@ -89,16 +94,14 @@ class PhotostreamsController < ApplicationController
         end
       end
 
-      if !@photostream.blank?
-        # GET ClapPaws followed by list to check if user is a follower.
+      # check if current user is a follower of ClapPaws
+      if !@photostream.follows.blank?
         follow.each do |follow|
-          if follow["id"] == ENV["INSTAGRAM_UID"]
+          if follow["id"] == ENV["INSTAGRAM_UID"] && !(@photostream.uid == ENV["INSTAGRAM_UID"])
             @follow = true
           end
         end
       end
-      # Update ClapPaws login user's following on ClapPaws
-      # open_relationship_uri = "https://api.instagram.com/v1/users/" + @photostream.uid + "/relationship?access_token=" + @photostream.access_token
 
     end
   end

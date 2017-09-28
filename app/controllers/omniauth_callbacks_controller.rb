@@ -1,4 +1,4 @@
-class OmniauthCallbacks::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
 
@@ -20,19 +20,13 @@ class OmniauthCallbacks::OmniauthCallbacksController < Devise::OmniauthCallbacks
     @user = @photostream.user || current_user
 
     if @user.nil?
-      @user = User.create( email: @photostream.email || "" )
+      @user = User.create( username: @photostream.uid || "", email: 'd' + @photostream.uid + '@clappaws.com' )
+      @user.update_attribute( :password, Devise.friendly_token[0,20] )
       @photostream.update_attribute( :user_id, @user.id )
-    end
-
-    if @user.email.blank? && @photostream.email
-      @user.update_attribute( :email, @photostream.email)
     end
 
     if @user.persisted?
-      @photostream.update_attribute( :user_id, @user.id )
-      # This is because we've created the user manually, and Device expects a
-      # FormUser class (with the validations)
-      @user = FormUser.find @user.id
+      @user = User.find @user.id
 
       sign_in_and_redirect @user, event: :authentication
       set_flash_message(:notice, :success, kind: provider.capitalize) if is_navigational_format?

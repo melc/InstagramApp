@@ -1,0 +1,77 @@
+<div style="text-align: left;">
+<h4 style="font-weight: bold; color: darkred;">SECTION I. Introduction</h4>
+<p>At ClapPaws we believe it is important for our customers and users to understand what information we collect, how we use it and who it is shared with. We are therefore committed to protecting your privacy and being transparent about our practices.</p>
+<p>Our Privacy Policy explains how ClapPaws and its affiliates (further referred to as “ClapPaws”,  “ClapPaws LLC”, “we” or “us”) collect, use, and share information when you use our websites (including www.ClapPaws.org) or our mobile applications (collectively referred to as our “Services”).</p>
+<p>This Privacy Policy is incorporated into and is subject to the ClapPaws Terms of Service. Your use of the ClapPaws Service and any personal information you provide to us or via the ClapPaws Service remains subject to the terms of this Privacy Policy.</p>
+<p>This Privacy Policy will be updated to reflect our current data collection, use, and sharing practices.</p>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">SECTION II. Third Party Services</h4>
+<p>In addition to the Services we provide directly, we also use third party service providers (collectively referred to as “Third Party Services”) who operate their own Privacy Policies (listed below) and may also provide options to 'opt-out' of data collection. All the Third Party Services we use we, as a company, trust and deem their services important into our effective operation.
+<p>So you can find out more about the services we use, and in turn those you may use, whilst interacting with our Services, we are also providing information on what we use the services for and links to their associated Privacy Policies.</p>
+<h5 style="font-weight: bold; color: darkred">The Third Party Services we use:</h5>
+<ul>
+<li><b>Google Analytics</b> — for the collection of anonymous analytical data to help us better understand how our customers and users use our Services. The Google Analytics Privacy Policy can be found at: <a href="http://www.google.com/analytics/learn/privacy.html" target="_blank">http://www.google.com/analytics/learn/privacy.html</a></li>
+<li><b>Apple Analytics</b> — (if enabled by user) for the collection of anonymous analytical data to help us better understand how our customers and users use our Services. App Analytics is covered under the Apple Privacy Policy: <a href="https://www.apple.com/privacy/" target="_blank">https://www.apple.com/privacy/</a></li>
+</ul>
+<h5 style="font-weight: bold; color: darkred;">Third Party SDK's (Software Development Kit) and API's</h5>
+<ul>
+<li><b>Google Maps API</b> — provides us with the ability to locate a place and nearby businesses information. The Google Maps API is covered under the Google Privacy Policy which can be found at: <a href="https://www.google.com/policies/privacy" target="_blank">https://www.google.com/policies/privacy</a></li>
+<li><b>Instagram API</b> — provides us with the ability to interact with Instagram Platform for integration with Instagram if and when you choose to connect your Instagram account. The Instagram Privacy Policy can be found at: <a href="https://help.instagram.com/155833707900388" target="_blank">https://help.instagram.com/155833707900388</a></li>
+</ul>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">SECTION III. Information we collect and how we use it</h4>
+<p>In order to provide you with our Services, we collect certain information from you when you register and interact with our Services. The information we gather falls into two categories: information you actively provide (for instance when you create an account), and information we collect through your use of our Services.</p>
+<h5 style="font-weight: bold; color: darkred;">Information you actively provide to us:</h5>
+<p>Via our Website and the Third Party Services associated with it:</p>
+<ul>
+<li><b>Name and email address</b> — you may provide this information to us through correspondence (for example via email), through subscribing to our newsletters or through the use of a Third Party Service. We use this information to contact you and personalise the content of our messages.</li>
+<li><b>Correspondence and communications</b> — any other information you choose to share with us via correspondence, including but not limited to email, support requests, post or social media. We use this information to understand your correspondence and respond to your enquiries.</li>
+</ul>
+<p>Via our Mobile applications and the Third Party Services associated with it:</p>
+<ul>
+<li><b>Application Data</b> — All application data (that is the data you create and add to ClapPaws) is only stored locally on your devices and, if enabled, on iCloud. This data is never shared with any other services or people unless you explicitly choose to do so through the sharing options available in ClapPaws.</li>
+<li><b>Feed Data</b> — when connecting ClapPaws to the available web services (feeds), the application collects the information which is provided to it from the relative service, including a token to authenticate your identity between these accounts. This information may include your name, the names of those you interact with, your username, the usernames of those you interact with, your location (past and present), media (such as photos and videos) and the times and dates the data was originally published, as well as any other information your have shared on these services.</li>
+<li><b>Photos</b> — we accesses your photos to allow you to add photos to a moment. Information from your photos is only stored when you select a photo to include in a moment.</li>
+<li><b>Location</b> — we will collect location information based on, for example, your device's GPS coordinates, unless you configure your operating system settings to prevent our collection of location information. This allows ClapPaws to organise your data by place, provide 'nearby' search results and provide anonymous analytical information on the geographical distribution (city level) of our user base around the world.</li>
+<li><b>Metadata</b> — when collecting information from external sources as well as your device we may also store metadata, such as time and location information, associated with the data. We use metadata to organise and search your data.</li>
+</ul>
+<h5 style="font-weight: bold; color: darkred;">Information we otherwise receive:</h5>
+<p>Via our Website and the Third Party Services associated with it:</p>
+<ul>
+<li><b>Usage Information</b> — we collect certain information when you use our Services, including information about your interaction with the Services, including the actions you take on the Services; and device information, such as unique device identifiers, operating system information, service provider, IP address, screen resolution, browser type, language, referring site, approximate location (city level) and the date and time of each visitor request.</li>
+<li><b>Location</b> — for the purposes of analytical information we will collect location information if you provide it to us or based on, for example, your IP address, to provide anonymous analytical information on the geographical distribution (city level) of our visitors around the world.</li>
+<li><b>Cookies</b> — we may also collect certain information through the use of “cookies”. Cookies are small files that your browser places on your computer. We may use session cookies, persistent cookies, and other tracking technologies to better understand how you interact with our Services, to monitor usage by our users and web traffic routing on our Services, and to improve our Services. Most Internet browsers automatically accept cookies. You can instruct your browser, by editing its options, to stop accepting cookies or to prompt you before accepting cookies from the websites you visit.</li>
+</ul>
+<p>Via our Mobile applications:</p>
+<ul>
+<li><b>Usage Information</b> — we collect certain information when you use our Services, including information about your interaction with the Services, including the actions you take on the Services; and device information, such as unique device identifiers, operating system information, IP address, browser type and language.</li>
+</ul>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">SECTION IV. Information we share and who we share it with</h4>
+<ul>
+<li><b>Name, and correspondence</b> —  Google Analytics, and Apple Analytics for all enquiries directed to us via our support website and our support email accounts.</li>
+<li><b>Location</b> — Google Analytics, Apple Analytics, and Google Maps API.</li>
+<li><b>Usage information</b> — Google Analytics, and Apple Analytics.</li>
+</ul>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">SECTION V: Data Storage</h4>
+<p>All application data (that is the data you create and add to ClapPaws) is only stored locally on your devices and, if enabled, on iCloud. This data is never shared with any other services unless you explicitly choose to do so through the sharing options available in ClapPaws.</p>
+<p>We have no way to access ClapPaws application data and therefore cannot read, recover or share data for or on behalf of any person or organisation.</p>
+<p>Data shared to Third Party Services as detailed above may be stored on the servers of the associated Third Party Service.</p>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">SECTION VI: Data Protection</h4>
+<p>We take reasonable measures to protect any personal information we may hold about you in an effort to prevent loss, misuse, and unauthorised access, disclosure, alteration, and destruction. However, despite our efforts, no security measures are perfect or impenetrable and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+<p>For information on how your iOS device encrypts and secures data please see <a href="https://support.apple.com/en-gb" target="_blank">https://support.apple.com/en-gb</a>. For information on how data is protected on iCloud, please see <a href="https://support.apple.com/en-gb/HT202303" target="_blank">https://support.apple.com/en-gb/HT202303</a>.</p>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">SECTION VII: Children</h4>
+<p>Our Services are not for use by children under 13 and we do not knowingly collect personal information from children under 13. If we learn that we have collected personal information of a child under 13, we will delete such information.</p>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">SECTION VIII: Changes to this Policy</h4>
+<p>From time to time we may change our privacy policy and although these changes might be minor we encourage our users to check this page regularly. Any major changes of significant impact to our users will be communicated on the ClapPaws site and in-app. By continuing to use ClapPaws after those changes become effective, you are agreeing to be bound by the revised policy.</p>
+<hr />
+<h4 style="font-weight: bold; color: darkred;">Questions</h4>
+<p>If you have any questions regarding our Privacy Policy, please contact us on support@clappaws.com.</p>
+<br />
+<br />
+<p><em>This privacy policy was last updated on September 26 2017.</em></p>
+</div>
