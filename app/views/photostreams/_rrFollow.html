@@ -1,14 +1,14 @@
 <% if @follow == true %>
     <li class="followBtn">
     <%= link_to 'Following',
-    'https://api.instagram.com/v1/users/' + @photostream.uid + '/relationship?access_token=' + @photostream.access_token + '&ACTION=unfollow',
+    'https://api.instagram.com/v1/users/' + @photostream.uid + '/relationship?access_token=' + ENV["INSTAGRAM_ACCESS_TOKEN"] + '&ACTION=unfollow',
     :method => :post, :class => "btn btn-success btn-sm pull-right", 'data-no-turbolink' => true %>
     </li>
 <% else %>
     <% if !(@photostream.uid == ENV["INSTAGRAM_UID"]) %>
         <li class="followBtn">
         <%= link_to 'Follow',
-        'https://api.instagram.com/v1/users/' + @photostream.uid + '/relationship?access_token=' + @photostream.access_token + '&ACTION=follow',
+        'https://api.instagram.com/v1/users/' + @photostream.uid + '/relationship?access_token=' + ENV["INSTAGRAM_ACCESS_TOKEN"] + '&ACTION=follow',
         :method => :post, :class => "btn btn-primary btn-sm pull-right", 'data-no-turbolink' => true
         %>
         </li>
