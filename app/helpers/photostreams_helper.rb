@@ -10,7 +10,7 @@ module PhotostreamsHelper
 
   def photos_count
     tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 +
-        "?access_token=" + @photostream.access_token + "&scope=public_content"
+        "?access_token=" + ENV[INSTAGRAM_ACCESS_TOKEN] + "&scope=public_content"
     response = open(tag_count_uri).read
     parse = JSON.parse(response)
     jsonTagCount = parse["data"]
@@ -28,7 +28,7 @@ module PhotostreamsHelper
   end
 
   def first_photos_slideshow
-  	uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 + "/media/recent?access_token=" + @photostream.access_token
+  	uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 + "/media/recent?access_token=" + ENV[INSTAGRAM_ACCESS_TOKEN]
     photos_slideshow(uri)
  	end
 
@@ -42,7 +42,7 @@ module PhotostreamsHelper
 	def profile
 		open_uri = "https://api.instagram.com/v1/users/" +
                   @photostream.uid + "/?access_token=" +
-                  @photostream.access_token
+                  ENV[INSTAGRAM_ACCESS_TOKEN]
   	response = open(open_uri).read
   	parse = JSON.parse(response)
   	jsonResults = parse["data"]
@@ -63,7 +63,7 @@ module PhotostreamsHelper
   end
 
   def counts
-    media_uri = "https://api.instagram.com/v1/users/" + @photostream.uid + "/?access_token=" + @photostream.access_token
+    media_uri = "https://api.instagram.com/v1/users/" + @photostream.uid + "/?access_token=" + ENV[INSTAGRAM_ACCESS_TOKEN]
     response = open(URI.escape(media_uri)).read
     parse = JSON.parse(response)
 
@@ -73,7 +73,7 @@ module PhotostreamsHelper
   end
 
   def follow
-    follows_uri = "https://api.instagram.com/v1/users/self/follows?access_token=" + @photostream.access_token
+    follows_uri = "https://api.instagram.com/v1/users/self/follows?access_token=" + ENV[INSTAGRAM_ACCESS_TOKEN]
     response = open(follows_uri).read
     parse = JSON.parse(response)
     jsonResults = parse["data"]
