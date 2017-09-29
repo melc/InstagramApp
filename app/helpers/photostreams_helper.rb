@@ -73,7 +73,7 @@ module PhotostreamsHelper
   end
 
   def follow
-    follows_uri = "https://api.instagram.com/v1/users/self/follows?access_token=" + ENV["INSTAGRAM_ACCESS_TOKEN"]
+    follows_uri = "https://api.instagram.com/v1/users/self/followed-by?access_token=" + ENV["INSTAGRAM_ACCESS_TOKEN"]
     response = open(follows_uri).read
     parse = JSON.parse(response)
     jsonResults = parse["data"]

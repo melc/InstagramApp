@@ -64,7 +64,7 @@ class PhotostreamsController < ApplicationController
         redirect_to @auth_uri
 =end
       @auth_uri = 'https://instagram.com/oauth/authorize/?client_id=' + ENV["INSTAGRAM_CLIENT_ID"] +
-            '&redirect_uri=https://clappaws.org/users/auth/instagram/callback&response_type=code&scope=public_content+follower_list+comments'
+            '&redirect_uri=http://localhost:3000/users/auth/instagram/callback&response_type=code&scope=public_content+follower_list+comments'
       response = open(@auth_uri).read
 
       @user_id = current_user.id
@@ -97,12 +97,11 @@ class PhotostreamsController < ApplicationController
       # check if current user is a follower of ClapPaws
       if !@photostream.follows.blank?
         follow.each do |follow|
-          if follow["id"] == ENV["INSTAGRAM_UID"] && !(@photostream.uid == ENV["INSTAGRAM_UID"])
+          if follow["id"] == @photostream.uid && !(@photostream.uid == ENV["INSTAGRAM_UID"])
             @follow = true
           end
         end
       end
-
     end
   end
 
