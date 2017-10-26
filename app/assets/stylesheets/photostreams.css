@@ -171,7 +171,7 @@
     color: darkred;
 }
 
-photostream.logo {
+.photostream.logo {
     width: 114px;
     height: 114px;
     border: 1px inset darkgrey;
