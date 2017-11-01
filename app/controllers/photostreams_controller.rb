@@ -87,7 +87,7 @@ class PhotostreamsController < ApplicationController
           redirect_to root_path
       end
 
-      # GET ClapPaws dog news from google newsgroup
+      # GET ClapPaws dog news from microsoft newsgroup
       unless @photostream.feed1.nil?
         news_bar.each do |result|
           @news << result unless result["name"].nil?

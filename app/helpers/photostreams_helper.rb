@@ -8,23 +8,46 @@ module PhotostreamsHelper
     end
   end
 
+  def check_http( uri_str, parse_val_1, parse_val_2 )
+
+    response = Net::HTTP.get_response(URI.parse(uri_str))
+    if ["400", "401", "402", "403", "404"].include? response.code
+      render json: {message: "Error code: " + response.code + " - Access denied. Try later.."}
+
+    elsif ['500', '502', '503', '504'].include? response.code
+      render json: {message: "Error code: " + response.code + " - Server Error. Contact ClapPaws support.."}
+    else
+      parse = JSON.parse(response.body)
+
+      if parse_val_2.nil?
+        jsonResults = parse[parse_val_1]
+      else
+        jsonResults = parse[parse_val_1][parse_val_2]
+      end
+
+      return jsonResults
+
+    end
+  end
+
   def photos_count
     tag_count_uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 +
         "?access_token=" + ENV["INSTAGRAM_ACCESS_TOKEN"] + "&scope=public_content"
-    response = open(tag_count_uri).read
-    parse = JSON.parse(response)
-    jsonTagCount = parse["data"]
 
-    return jsonTagCount
+    return check_http(tag_count_uri, "data", nil)
   end
 
 	def photos_slideshow(uri)
-    response = open(uri).read
-    parse = JSON.parse(response)
-    jsonNextResults = parse["pagination"]
+
+    jsonNextResults = check_http(uri, "pagination", nil)
+
     @next_url = jsonNextResults["next_url"] unless jsonNextResults.nil?
-    jsonResults = parse["data"]
-    return jsonResults
+
+    response = Net::HTTP.get_response(URI.parse(uri))
+    parse = JSON.parse(response.body)
+
+    return  parse["data"]
+
   end
 
   def first_photos_slideshow
@@ -43,41 +66,28 @@ module PhotostreamsHelper
 		open_uri = "https://api.instagram.com/v1/users/" +
                   @photostream.uid + "/?access_token=" +
                   ENV["INSTAGRAM_ACCESS_TOKEN"]
-  	response = open(open_uri).read
-  	parse = JSON.parse(response)
-  	jsonResults = parse["data"]
-  	
-    return jsonResults
+
+    return check_http(open_uri, "data", nil)
   end
 
   def news_bar
 
-    news_uri = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + @photostream.feed1 + "&count=50&mkt=en-us&subscription-key=" + ENV["BING_ID"]
+    news_uri = "https://api.cognitive.microsoft.com/bing/v7.0/search?q=" + @photostream.feed1 + "&count=50&mkt=en-us&subscription-key=" + ENV["BING_ID"]
 
-    response = open(URI.escape(news_uri)).read
-    parse = JSON.parse(response)
+    return check_http(news_uri, "webPages", "value")
 
-    jsonResults = parse["value"]            # name, url, image (.thumbnail.contentUrl), description, datePublished
-
-    return jsonResults
   end
 
   def counts
     media_uri = "https://api.instagram.com/v1/users/" + @photostream.uid + "/?access_token=" + ENV["INSTAGRAM_ACCESS_TOKEN"]
-    response = open(URI.escape(media_uri)).read
-    parse = JSON.parse(response)
 
-    jsonResults = parse["data"]["counts"]
+    return check_http(media_uri, "data", "count")
 
-    return jsonResults
   end
 
   def follow
     follows_uri = "https://api.instagram.com/v1/users/self/followed-by?access_token=" + ENV["INSTAGRAM_ACCESS_TOKEN"]
-    response = open(follows_uri).read
-    parse = JSON.parse(response)
-    jsonResults = parse["data"]
 
-    return jsonResults
+    return check_http(follows_uri, "data", nil)
  	end
 end

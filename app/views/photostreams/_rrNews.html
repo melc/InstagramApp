@@ -9,7 +9,10 @@
 				<% else %>
 					<% @news.each do |item| %>
 						<div class="newsDIV">
-							<span class="news_title"><%= raw item["name"] %></span>&nbsp;(<span class="news_date"><%= DateTime.parse(item["datePublished"]).strftime("%a, %b %d, %Y %H:%M") %></span>)&nbsp;<span class="news_url"><a href="<%= item["url"] %>" target="_blank">read more >></a></span>
+							<span class="news_title"><%= raw item["name"] %></span>&nbsp;
+							(<span class="news_date"><%= DateTime.parse(item["dateLastCrawled"]).strftime("%a, %b %d, %Y %H:%M") %>
+							</span>)&nbsp;<span class="news_url"><a href="<%= item["url"] %>" target="_blank">read more >></a>
+							</span>
 						</div>
 					<% end %>
 				<% end %>
