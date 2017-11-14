@@ -73,7 +73,7 @@ module PhotostreamsHelper
 
   def news_bar
 
-    news_uri = "https://api.cognitive.microsoft.com/bing/v7.0/search?q=" + @photostream.feed1 + "&count=50&mkt=en-us&subscription-key=" + ENV["BING_ID"]
+    news_uri = "https://api.cognitive.microsoft.com/bing/v7.0/search?q=" + ENV["INSTAGRAM_FEED"] + "&count=50&mkt=en-us&subscription-key=" + ENV["BING_ID"]
 
     return check_http(news_uri, "webPages", "value")
 
