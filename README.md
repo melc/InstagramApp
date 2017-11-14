@@ -49,5 +49,5 @@ include:
 - Click on button "comment" to allow user comment the media on instagram
 
 ***
-![Instagram App Home Page](https://clappaws.org/instagram.png)
+![Instagram App Home Page](https://instagramapp.clappaws.cc/instagram.png)
 

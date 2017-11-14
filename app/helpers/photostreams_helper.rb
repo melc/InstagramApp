@@ -51,7 +51,8 @@ module PhotostreamsHelper
   end
 
   def first_photos_slideshow
-  	uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 + "/media/recent?access_token=" + ENV["INSTAGRAM_ACCESS_TOKEN"]
+  	uri = "https://api.instagram.com/v1/tags/" + @photostream.tag1 + "/media/recent?access_token=" +
+        ENV["INSTAGRAM_ACCESS_TOKEN"]
     photos_slideshow(uri)
  	end
 
@@ -81,7 +82,7 @@ module PhotostreamsHelper
   def counts
     media_uri = "https://api.instagram.com/v1/users/" + @photostream.uid + "/?access_token=" + ENV["INSTAGRAM_ACCESS_TOKEN"]
 
-    return check_http(media_uri, "data", "count")
+    return check_http(media_uri, "data", "counts")
 
   end
 
